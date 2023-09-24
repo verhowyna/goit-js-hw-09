@@ -30,3 +30,39 @@ button {
   top: 50%;
   left: 45%;
 }
+
+.select-date {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-start {
+  height: 30px;
+  width: 60px;
+}
+
+.input-select {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.timer {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: center;
+}
+
+.value {
+  font-size: 40px;
+}
+
+.label {
+  font-weight: 700;
+}
