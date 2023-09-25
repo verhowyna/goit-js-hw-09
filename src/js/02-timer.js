@@ -44,8 +44,7 @@ function onStart(evt) {
     timerHours.textContent = timer.addLeadingZero(hours);
     timerMinutes.textContent = timer.addLeadingZero(minutes);
     timerSeconds.textContent = timer.addLeadingZero(seconds);
-    addLeadingZero();
-
+    
   }, 1000)
 }
 flatpickr(inputForm, options);
