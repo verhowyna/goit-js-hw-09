@@ -18,6 +18,7 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
+    console.log(selectedDates[0]);
       if (selectedDates[0] < Date.now()) {
         alert('Please choose a date in the future')
       } btnStart.disabled = false;
