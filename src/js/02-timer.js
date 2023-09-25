@@ -1,7 +1,7 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 
-import { addLeadingZero, convertMs } from "./helpers";
+import { convertMs } from "./helpers";
 
 const timerDays = document.querySelector('[data-days]');
 const timerHours = document.querySelector('[data-hours]');
@@ -40,11 +40,11 @@ function onStart(evt) {
     }
     
     const timer = convertMs(dif);
-    timerDays.textContent = timer.addLeadingZero(days);
-    timerHours.textContent = timer.addLeadingZero(hours);
-    timerMinutes.textContent = timer.addLeadingZero(minutes);
-    timerSeconds.textContent = timer.addLeadingZero(seconds);
-    addLeadingZero({ days, hours, minutes, seconds });
+    timerDays.textContent = timer.days.toString().padStart(2, 0);
+    timerHours.textContent = timer.hours.toString().padStart(2, 0);
+    timerMinutes.textContent = timer.minutes.toString().padStart(2, 0);
+    timerSeconds.textContent = timer.seconds.toString().padStart(2, 0);
+
   }, 1000)
 }
 flatpickr(inputForm, options);
