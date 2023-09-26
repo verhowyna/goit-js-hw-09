@@ -3,10 +3,10 @@ import "flatpickr/dist/flatpickr.min.css";
 
 import { convertMs } from "./helpers";
 
-const timerDays = document.querySelector('[data-days]');
-const timerHours = document.querySelector('[data-hours]');
-const timerMinutes = document.querySelector('[data-minutes]');
-const timerSeconds = document.querySelector('[data-seconds]');
+const counterDays = document.querySelector('[data-days]');
+const counterHours = document.querySelector('[data-hours]');
+const counterMinutes = document.querySelector('[data-minutes]');
+const counterSeconds = document.querySelector('[data-seconds]');
 const inputForm = document.querySelector('#datetime-picker');
 const btnStart = document.querySelector('[data-start]');
 
@@ -40,11 +40,10 @@ function onStart(evt) {
     }
     
     const timer = convertMs(dif);
-    timerDays.textContent = timer.days.toString().padStart(2, 0);    
-    console.log(timerDays.textContent);
-    timerHours.textContent = timer.hours.toString().padStart(2, 0);
-    timerMinutes.textContent = timer.minutes.toString().padStart(2, 0);
-    timerSeconds.textContent = timer.seconds.toString().padStart(2, 0);
+    counterDays.textContent = timer.days.toString().padStart(2, 0);    
+    counterHours.textContent = timer.hours.toString().padStart(2, 0);
+    counterMinutes.textContent = timer.minutes.toString().padStart(2, 0);
+    counterSeconds.textContent = timer.seconds.toString().padStart(2, 0);
    
   }, 1000)
 }
