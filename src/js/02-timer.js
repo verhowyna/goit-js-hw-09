@@ -40,11 +40,12 @@ function onStart(evt) {
     }
     
     const timer = convertMs(dif);
-    timerDays.textContent = timer.days.toString().padStart(2, 0);
+    timerDays.textContent = timer.days.toString().padStart(2, 0);    
+    console.log(timerDays.textContent);
     timerHours.textContent = timer.hours.toString().padStart(2, 0);
     timerMinutes.textContent = timer.minutes.toString().padStart(2, 0);
     timerSeconds.textContent = timer.seconds.toString().padStart(2, 0);
-
+   
   }, 1000)
 }
 flatpickr(inputForm, options);
