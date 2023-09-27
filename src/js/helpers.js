@@ -13,3 +13,6 @@ export function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
+export function addLeadingZero(value) {
+return value.toString().padStart(2, 0);
+}

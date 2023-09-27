@@ -1,7 +1,7 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 
-import { convertMs } from "./helpers";
+import { addLeadingZero, convertMs } from "./helpers";
 
 const counterDays = document.querySelector('[data-days]');
 const counterHours = document.querySelector('[data-hours]');
@@ -40,10 +40,10 @@ function onStart(evt) {
     }
     
     const timer = convertMs(dif);
-    counterDays.textContent = timer.days.toString().padStart(2, 0);    
-    counterHours.textContent = timer.hours.toString().padStart(2, 0);
-    counterMinutes.textContent = timer.minutes.toString().padStart(2, 0);
-    counterSeconds.textContent = timer.seconds.toString().padStart(2, 0);
+    counterDays.textContent = addLeadingZero(timer.days);    
+    counterHours.textContent = addLeadingZero(timer.hours);
+    counterMinutes.textContent = addLeadingZero(timer.minutes);
+    counterSeconds.textContent = addLeadingZero(timer.seconds);
    
   }, 1000)
 }
