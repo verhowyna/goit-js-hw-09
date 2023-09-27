@@ -69,3 +69,9 @@ button {
 .label {
   font-weight: 700;
 }
+
+.btn-submit {
+  height: 20px;
+  width: 150px;
+  font-size: 14px;
+}
